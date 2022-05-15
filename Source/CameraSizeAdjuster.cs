@@ -18,9 +18,13 @@ namespace Umbrella.Utility
 
         private Material _baseAspectAreaMat;
 
-        private void Start()
+        private void Awake()
         {
             _camera = GetComponent<Camera>();
+        }
+
+        private void Start()
+        {
             AdjustCameraSize();
         }
 
@@ -79,7 +83,7 @@ namespace Umbrella.Utility
 
         private void OnPostRender()
         {
-            if (_camera == null || !_showBaseAspectArea)
+            if (!_showBaseAspectArea)
             {
                 return;
             }
