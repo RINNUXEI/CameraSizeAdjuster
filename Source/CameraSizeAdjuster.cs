@@ -7,9 +7,9 @@ namespace Umbrella.Utility
     public class CameraSizeAdjuster : MonoBehaviour
     {
         [SerializeField] private Vector2Int _baseAspectRatio = new Vector2Int(9, 16);
-        [SerializeField] private float _baseCameraSize;
-        [SerializeField, Range(1, 179)] private float _baseCameraFOV;
-        [SerializeField] private bool _showBaseAspectArea;
+        [SerializeField] private float _baseCameraSize = 5;
+        [SerializeField, Range(1, 179)] private float _baseCameraFOV = 60;
+        [SerializeField] private bool _showBaseAspectArea = false;
         [SerializeField] private Color _baseAspectAreaColor = new Color(0, 1, 0, 0.3f);
 
         private Camera _camera;
@@ -79,7 +79,7 @@ namespace Umbrella.Utility
 
         private void OnPostRender()
         {
-            if (!_showBaseAspectArea)
+            if (_camera == null || !_showBaseAspectArea)
             {
                 return;
             }
