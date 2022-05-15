@@ -14,9 +14,9 @@ A Unity script to adjust camera size according to different aspect ratios.
 1. Import the unitypackage into your Unity project.
 2. Make sure that the CameraSizeAdjusterEditor.cs is under an Editor folder.
 3. Attach CameraSizeAdjuster.cs onto your camera object.
-4. Set the *Base Aspect Ratio* field.
-5. When your camera is under orthograpic projection, set the *Base Camera Size* field.
+4. Set the *Base Aspect Ratio* field to your desired original aspect ratio.
+5. When your camera is under orthograpic projection, set the *Base Camera Size* field to your desired original camera size.
 6. Notice that the size of your camera changes properly responding to different screen sizes.  
-7. When your camera is under perspective projection, set the *Base Camera FOV* field.
+7. When your camera is under perspective projection, set the *Base Camera FOV* field to your desired original camera FOV.
 6. Notice that the field of view of your camera changes properly responding to different screen sizes.
 7. You can toggle on the *Show Base Aspect Area* field to show a preview of your original aspect ratio viewport.
